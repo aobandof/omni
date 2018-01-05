@@ -3,13 +3,13 @@
     <h2>{{caption}}</h2>
     <ul>
       <li v-for="user in users">
-        <span>{{ user.name }}</span><span>{{ user.perfil }}</span><button v-on:click="deleteUser(user)">X</button>
+        <span>{{ user.name }}</span><span>{{ user.email }}</span><button v-on:click="deleteUser(user)">X</button>
       </li>
     </ul>
 
     <form action="" v-on:submit.prevent="addUser" id="form_add_user">
       <input type="text" name="" id="txt_user_name" v-model="newUser.name" placeholder="codigo">
-      <input type="text" name="" id="" v-model="newUser.perfil" placeholder="perfil">
+      <input type="email" name="" id="" v-model="newUser.email" placeholder="email">
       <button type="submit">ADD</button>
     </form>
 
@@ -22,9 +22,9 @@
       return {
         caption: 'Lista de Usuarios',
         users: [
-          { name: 'aobando', perfil: 'admin' },
-          { name: 'gperez', perfil: 'reviser' }, 
-          { name: 'mbustos', perfil: 'editor' }  
+          // { name: 'aobando', perfil: 'admin' },
+          // { name: 'gperez', perfil: 'reviser' }, 
+          // { name: 'mbustos', perfil: 'editor' }  
         ],
         newUser: { }
       }
@@ -43,7 +43,7 @@
       // console.log('componente User cargado');
       // document.getElementById('txt_user_name').focus();// PARECE SER QUE NO CREA EL ELEMENTO AUN, YA QUE NO RESULTA ESTE ENLACE
       this.$http.get('https://jsonplaceholder.typicode.com/users')
-        .then(res => console.log(res));
+        .then(res => this.users = res.body);
     }
   }
 </script>

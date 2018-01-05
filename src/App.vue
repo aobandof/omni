@@ -1,7 +1,16 @@
 <template>
   <div id="app">
-    <!-- <SearchSku/>  -->
-    <User/>
+    <nav>
+      <ul>
+        <li>
+          <router-link to="/sku">Sku</router-link>
+        </li>
+        <li>
+          <router-link to="/">User</router-link>
+        </li>
+      </ul>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -12,7 +21,7 @@ import User from './components/User.vue';
 export default {
   name: 'app',
   components: {
-    // SearchSku,
+    SearchSku,
     User
   }
 }

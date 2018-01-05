@@ -13,17 +13,7 @@
     data () {
       return {
         caption: 'Consulta Stock de SKU',
-        // sku : {
-        //   code: '',
-        //   article: '',
-        //   description: ''
-        // },
         sku_code: '',
-        // arr_skus: [
-        //   { name: 'eat' },
-        //   { name: 'dinner' },
-        //   { name: 'play' }
-        // ]
       }
     },
     methods: {
@@ -34,8 +24,6 @@
     }
   }
 </script>
-
-
 
 <style media='screen'>
 

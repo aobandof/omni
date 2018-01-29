@@ -2,15 +2,18 @@
   <div id="app">
     <nav>
       <ul>
-        <li>
-          <router-link to="/sku">Sku</router-link>
+        <li  class="fakeButton">
+          <router-link to="/sku">Sku</router-link >
         </li>
-        <li>
+        <li  class="fakeButton">
           <router-link to="/">User</router-link>
         </li>
-        <li>
+        <li  class="fakeButton">
+          <router-link to="/">Services</router-link>
+        </li>
+        <li  class="fakeButton">
           <router-link to="/">About</router-link>
-        </li>        
+        </li>               
       </ul>
     </nav>
     <router-view></router-view>
@@ -38,5 +41,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
+
+.fakeButton{
+    margin: 10px;
+    padding: 10px;
+    background: rgb(10, 83, 80);
+    text-decoration: none;
+  }
 </style>

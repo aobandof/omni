@@ -8,6 +8,9 @@
         <li>
           <router-link to="/">User</router-link>
         </li>
+        <li>
+          <router-link to="/">About</router-link>
+        </li>        
       </ul>
     </nav>
     <router-view></router-view>
